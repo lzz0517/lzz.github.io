@@ -1,0 +1,29 @@
+
+@font-face {font-family: "iconfont";
+  src: url("font_bda8h33q7ps98uxr.eot"); /* IE9*/
+  src: url("font_bda8h33q7ps98uxr.eot") format('embedded-opentype'), /* IE6-IE8 */
+  url("font_bda8h33q7ps98uxr.woff") format('woff'), /* chrome, firefox */
+  url("font_bda8h33q7ps98uxr.ttf") format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url("font_bda8h33q7ps98uxr.svg") format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weixin:before { content: "\e603"; }
+
+.icon-qq:before { content: "\e62d"; }
+
+.icon-jiantou:before { content: "\e604"; }
+
+.icon-zliconweibo01:before { content: "\e64b"; }
+
+.icon-jiantou-copy:before { content: "\e609"; }
+
+.icon-weibiaoti303:before { content: "\e6f2"; }
+

@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/*BANNER********************************************************************/
+.banner{ width: 100%; background-position: center top; background-repeat: no-repeat; background-attachment: fixed; height: 500px; }
+@media screen and (max-width:1024px){.banner{height:350px;background-size:auto 45%;}}
+@media screen and (max-width:768px){.banner{height:300px;background-size:auto 100%;background-attachment:scroll}}
+@media screen and (max-width:450px){.banner{height:250px;background-size:auto 100%;background-attachment:scroll}}
+
+/*新闻列表********************************************************************/
+.news_list{ margin-top: 50px; margin-bottom: 100px; }
+.news_list .column{ width: 100%; margin-bottom: 5em; text-align: center; }
+.news_list .column span{ display: block; }
+.news_list .column .title{ color: #333; font-size: 100%; margin-bottom: 0.5em; }
+.news_list .column .subtitle{color:#999;font-size:75%}
+
+.news_list ul{ list-style: none; padding-left:0px;}
+.news_list li{ height: 100px; width: 100%; padding-top: 25px; padding-bottom: 25px; }
+.news_list li span{ display: block; }
+.news_list li .time{ text-align: right; width: 35%; height: 100px; float: left;box-sizing:border-box}
+.news_list li .time .mmdd{ font-size: 250%; }
+.news_list li .time .yyyy{ font-size: 75%; color: #999; }
+.news_list li .content{ text-align: left; width: 40%; height: 100px; float: left; padding-right: 23%; padding-left: 2%; position: relative; }
+.news_list li .content .title{ font-size: 100%; color: #333; margin-bottom: 1em; margin-top: 0.5em; }
+.news_list li .content .note{ font-size: 81.3%; line-height: 1.8em; color: #666; }
+.news_list li .content .icon{position:absolute;top:28%;right:40%;color:#999;font-weight:400;font-size:200%;opacity:0}
+
+/*CSS3效果*/
+.news_list li{transition:all .2s ease-in-out;}
+.news_list li .time,
+.news_list li .content,
+.news_list li .content .icon{transition:all .5s ease-in-out;}
+.news_list a:hover li{ background: #fff200; }
+.news_list a:hover li .time{ padding-right: 50px; font-style: italic; }
+.news_list a:hover li .content{margin-left:-50px;}
+.news_list a:hover li .content .title{color: #000;}
+.news_list a:hover li .content .note{color: #333;}
+.news_list a:hover li .content .icon{color:#666;right:20%;opacity:1}
+
+/*自适应*/
+@media screen and (max-width: 1024px) {
+	.news_list li .time{ width: 20%;}
+	.news_list li .content{ width: 65%; padding-right: 10%; padding-left: 5%; }
+	.news_list li .content .icon{right:20%;}
+	.news_list a:hover li .content .icon{right:5%;}
+	}
+@media screen and (max-width: 768px) {
+	.news_list li{ height: auto; width: 96%; margin: 0px 2% 50px; border-bottom: 1px solid #dadada; }
+	.news_list li .time{ height: auto; text-align: left; float: none; width: 100%; }
+	.news_list li .time .mmdd{ display: inline; font-size: 125%; }
+	.news_list li .time .yyyy{ display: inline; margin-left: 1em; }
+	.news_list li .content{ height: auto; float: none; width: 100%; padding: 0px; }
+	.news_list a:hover li{ background: #f6f6f6; }
+	.news_list a:hover li .time{ padding-right: 0px; }
+	.news_list a:hover li .content{margin-left:0px;}
+	.news_list a:hover li .content .icon{opacity:0}
+	}
+
+/*分页*/
+.news_list .pages{ text-align: center; margin: 80px auto 20px; }
+.news_list .pages li{display:inline;margin-right:2px;margin-left:2px;font-size:75%}
+.news_list .pages li a{display:inline-block;width:35px;height:35px;background:#999;color:#FFF;line-height:35px;transition:all .5s ease-in-out}
+.news_list .pages .current,.news_list .pages li a:hover{background:#FFF200;color:#333;font-weight:700}
+
+
+/*新闻内容********************************************************************/
+.news_content{ margin: 0px auto 100px; width: 96%; padding-top: 150px; }
+.news_content  .column{ width: 100%; margin-bottom: 2em; }
+.news_content  .column span{ display: block; }
+.news_content  .column .title{ color: #666; font-size: 100%; margin-bottom: 0.5em; }
+.news_content  .column .subtitle{color:#999;font-size:75%}
+.news_content  .text{ font-size: 81.3%; line-height: 2em; border-left: 1px solid #dadada; padding-left: 80px; }
+.news_content  .text h1{ font-size: 150%; font-weight: normal; color: #333; }
+.news_content  .text .time{ font-size: 75%; color: #999; margin-bottom: 3em; }
+/*自适应*/
+@media screen and (max-width: 768px) {
+	.news_content{ margin: 0px auto 100px; padding-top: 100px; }
+	.news_content .left,.news_content .right{ display: none; }
+	.news_content .text{ font-size: 81.3%; line-height: 2em; border-left: none; padding-left: 0px; }
+	.news_content .text img{width:100%;}
+	}
+

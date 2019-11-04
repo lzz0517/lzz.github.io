@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/*BANNER********************************************************************/
+.banner{ width: 100%; background-position: center top; background-repeat: no-repeat; background-attachment: fixed; height: 400px; }
+@media screen and (max-width:1024px){.banner{height:350px;background-size:auto 45%;}}
+@media screen and (max-width:768px){.banner{height:300px;background-size:auto 100%;background-attachment:scroll}}
+@media screen and (max-width:450px){.banner{height:250px;background-size:auto 100%;background-attachment:scroll}}
+
+/*关于我们********************************************************************/
+.about .content{ margin: 100px auto; width: 80%; }
+.about .content .cn_name{ font-size: 100%; color: #333; margin-bottom: 0.5em; }
+.about .content .en_name{ font-size: 75%; color: #999; }
+.about .content .box{ margin-bottom: 50px; padding-bottom: 50px; border-bottom: 1px solid #dadada; }
+.about .content .box .column{ width: 100%; margin-bottom: 2em; }
+.about .content .box .column span{ display: block; }
+.about .content .box .column .title{ color: #666; font-size: 100%; margin-bottom: 0.5em; }
+.about .content .box .column .subtitle{color:#999;font-size:75%}
+.about .content .box .text{ font-size: 81.3%; line-height: 2em; }
+/*自适应*/
+@media screen and (max-width: 768px) {
+	.about .content{ margin: 50px auto 50px; width: 96%; }
+	.about .content .cn_name,.about .content .en_name{ text-align: center; }
+	.about .content .box{ margin-top: 50px; border-top: 1px solid #dadada; margin-bottom: 0px; padding-top: 50px; padding-bottom: 0px; border-bottom-style: none; }
+	}
+	
+/*客户名录********************************************************************/
+.client_list{margin-top:50px;margin-bottom:50px}
+.client_list .column{margin-bottom:5em;width:100%;text-align:center}
+.client_list .column span{display:block}
+.client_list .column .title{margin-bottom:.5em;color:#333;font-size:100%}
+.client_list .column .subtitle{color:#999;font-size:75%}
+.client_list .list{margin:0 auto 50px;width:80%}
+.client_list .list .logo{display:-webkit-flex;margin:-1px 0 0 -1px;padding:1em;height:100px;border:1px solid #efefef;background:#FFF;justify-content:center;align-items:center}
+.client_list .list .logo img{max-width:50%;max-height:60px;-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:grayscale(100%);filter:gray;opacity:0.5}
+/*CSS3效果*/
+.client_list .list .logo,.client_list .list .logo img{transition:all .5s ease 0s}
+.client_list .list .logo:hover{z-index:10;box-shadow:0 14px 40px #d6dae6}
+.client_list .list .logo:hover img{margin-top:-20px;-webkit-filter:grayscale(0);-moz-filter:grayscale(0);-ms-filter:grayscale(0);-o-filter:grayscale(0);filter:grayscale(0);filter:gray;opacity:1}
+/*自适应*/
+@media screen and (max-width: 768px) {
+	.client_list{margin-top:50px;margin-bottom:0px}
+	.client_list .column{margin-bottom:3em;}
+	.client_list .list{width:94%}
+	.client_list .list .logo img{max-width:60%;max-height:60px;}
+	}
+
